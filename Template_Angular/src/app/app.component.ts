@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from '@features/shell/components/header/header.component';
+import { FooterComponent } from '@features/shell/components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,
+    HeaderComponent,
+    FooterComponent
+  ],
   // Usamos template inline para asegurarnos de que NO carga basura
   template: `
+  <app-header></app-header>
     <router-outlet />
+  <app-footer></app-footer>
   `,
   styleUrl: './app.component.css' // Si tienes estilos globales en este css
 })
-export class AppComponent {}
+export class AppComponent { }
