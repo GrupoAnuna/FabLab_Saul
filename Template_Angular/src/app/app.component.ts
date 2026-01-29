@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@features/shell/components/header/header.component';
 import { FooterComponent } from '@features/shell/components/footer/footer.component';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,13 @@ import { FooterComponent } from '@features/shell/components/footer/footer.compon
     <router-outlet />
   <app-footer></app-footer>
   `,
-  styleUrl: './app.component.css' // Si tienes estilos globales en este css
+  styleUrl: './app.component.css' // estilos globales
 })
-export class AppComponent { }
+export class AppComponent { 
+
+  constructor(private viewportScroller: ViewportScroller) { }
+    // Scroll suave a la sección
+  scrollToSection(sectionId: string) {
+    this.viewportScroller.scrollToAnchor(sectionId);
+  }
+}

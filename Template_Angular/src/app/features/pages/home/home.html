@@ -1,6 +1,381 @@
 <!-- Apartado home -->
+<!-- Primer apartado presentación-->
+<div class="mx-auto mt-20 w-full max-w-[1280px] px-4 py-8 md:px-10 md:py-12">
+    <div class="flex min-h-[600px] flex-col items-stretch gap-8 lg:flex-row lg:gap-12">
 
-<p>hola</p>
-<p></p>
-<br><br><br><br>
-<p style="color: black;">Las piedras jamas</p>
+        <div class="order-2 flex flex-1 flex-col justify-center gap-8 lg:order-1 lg:pr-8">
+            <div class="flex flex-col gap-6 text-left">
+                <div
+                    class="inline-flex w-fit items-center gap-2 rounded-full border border-[#3c5345] bg-[#1c2620] px-3 py-1">
+                    <span class="h-2 w-2 animate-pulse rounded-full" style="background-color: #0AC6E4;"></span>
+                    <span class="text-xs font-bold uppercase tracking-wider" style="color: #03c9e6;">
+                        Abierto para creadores 24/7
+                    </span>
+                </div>
+
+                <h1 class="text-5xl font-black leading-[1.1] tracking-[-0.033em] text-white md:text-6xl xl:text-6xl">
+                    <span class="text-gray-custom">
+                        Democratizamos la tecnología
+                    </span>
+
+                    <span
+                        class="bg-gradient-to-r from-[#038FC7] via-[#08A5D3] to-[#03C7E5] bg-clip-text text-transparent">
+                        a todos aquellos con interés en la fabricación digital
+                    </span>
+
+                    <!-- <span class="bg-gradient-to-r from-[#FFC100] to-teal-400 bg-clip-text text-transparent">
+                        se fusiona con la artesanía digital
+                    </span> -->
+                </h1>
+
+                <p class="max-w-[600px] text-lg font-light leading-relaxed text-gray-500 md:text-xl"
+                    id="texto-jutificado">
+                    Transformamos ideas en productos
+                    tangibles, ofrecemos acceso a tecnologías creativas para prototipar,
+                    desarrollar y crear todo tipo de proyectos.
+                </p>
+            </div>
+
+            <div class="mt-2 flex flex-wrap gap-4">
+                <a routerLink="/servicios"
+                    class="flex h-14 min-w-[160px] items-center justify-center rounded-full  px-8 text-base font-bold text-[#111814] verdeFuerteFab shadow-[0_4px_20px_rgba(255, 193, 0, 1)] transition-transform hover:scale-105">
+                    <span class="text-white">Nuestros servicios</span>
+                    <span class="text-white material-symbols-outlined ml-2 text-lg">arrow_forward</span>
+                </a>
+
+                <button
+                    class="flex h-14 min-w-[160px] items-center justify-center rounded-full bg-surface-dark border border-[#3c5345]  px-8 text-base font-bold text-gray transition-colors hover:bg-[#254D32]"
+                    (click)="scrollToSection('acerca-de-nosotros')">
+                    Acerca de nosotros
+                </button>
+            </div>
+
+        </div>
+
+        <div class="order-1 relative min-h-[400px] flex-1 lg:order-2">
+            <div class="absolute inset-0 overflow-hidden rounded-xl group">
+                <div
+                    class="absolute inset-0 z-10 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent">
+                </div>
+
+                <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                    style="background-image: url('/images/saulExplicando.jpg');">
+                </div>
+
+
+                <!-- Floating card -->
+                <div
+                    class="absolute bottom-6 left-6 right-6 z-20 rounded-lg border border-[#3c5345]  p-4 shadow-xl backdrop-blur-sm">
+                    <div class="flex items-center gap-4">
+                        <div class="verdeFuerteFab rounded-full  p-3" style="color: white;">
+                            <span class="material-symbols-outlined">precision_manufacturing</span>
+                        </div>
+
+                        <div>
+                            <p class="font-bold text-white">¿Eres nuevo?</p>
+                            <p class="text-sm text-[#9db8a8]">Cómo empezar (formación básica)</p>
+                        </div>
+
+                        <div class="ml-auto">
+                            <button style="color: #01A7A4;" class="transition-colors hover:text-white" type="button"
+                                aria-label="Open">
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative glow -->
+            <div class="pointer-events-none absolute -right-10 -top-10 z-0 h-32 w-32 bg-primary opacity-40 blur-[80px]">
+            </div>
+        </div>
+    </div>
+    <span id="acerca-de-nosotros" class="text-black" style="visibility: hidden;">acerca de nosotros</span>
+</div>
+
+
+<!-- Apartado acerca de nosotros -->
+<section class="layout-container flex w-full flex-col">
+    <div class="flex justify-center">
+        <div class="layout-content-container flex w-full max-w-[1280px] flex-col  md:px-10">
+            <div class="@container">
+                <div class="@[480px]:p-4">
+                    <div class="flex min-h-[120px] flex-col bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-8 text-center relative overflow-hidden"
+                        data-alt="Futuristic 3D printer glowing green in dark lab">
+                        <div class="flex flex-col gap-4 max-w-[800px] z-10">
+                            <h2
+                                class="text-5xl font-black leading-[1.1] tracking-[-0.033em] text-white md:text-5xl xl:text-6xl">
+                                <span class="text-gray-custom">
+                                    Acerca
+                                </span>
+                                <span
+                                    class="bg-gradient-to-r from-[#038FC7] via-[#08A5D3] to-[#03C7E5] bg-clip-text text-transparent">
+                                    de nosotros
+                                </span>
+                            </h2>
+                            <p class="text-lg font-light leading-relaxed text-gray-500 md:text-xl"
+                                id="texto-jutificado">
+                                Somos un Centro de Fabricación Digital parte de la red global FabLab <a style=""
+                                    class="naranjaFab" target="_blank" href="https://www.fablabs.io/">Network.</a>
+                                Diseñamos, cortamos y fabricamos tus ideas con tecnología industrial, desde piezas
+                                únicas hasta producción para empresas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layout-content-container flex w-full  flex-col md:px-10 ">
+                <div class="p-4 @container">
+                    <div
+                        class="flex flex-col items-stretch justify-start rounded-xl lg:flex-row lg:items-center shadow-lg bg-surface-dark border border-[#29382f] overflow-hidden">
+                        <div class="w-full lg:w-1/2 min-h-[320px] bg-center bg-no-repeat bg-cover"
+                            data-alt="Two people collaborating over a CNC machine project"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCq8FFI7mxAtIaFdHvz-8p_7Dc8s7OjTezf4YuGd5nm0wJ3nklA6YGi3AZFQ-fzw21iyIDbwMlNCgQ0sAKFxcML5JgGXS-kJ5h3o1A2aW71Z3d4Lit8fz5H77qxQc6w1097i0Am2R9M94zWLmkj534PSs5VtQX-e_7TAv00GGrOCPBuAT9k_y9-RHfi66oh8J2QYTq6e2EZ0ZTMROxBvXV4U_nCdxYC6QqKrWEu9OsYhGez58DRmzOdoOeeQ7Mrh__X0qNt5UPPpIw");'>
+                        </div>
+                        <div class="flex w-full lg:w-1/2 grow flex-col items-start justify-center gap-6 p-8 lg:p-12">
+                            <div class="flex flex-col gap-4">
+                                <div style="color: #03C3E3;"
+                                    class="flex items-center gap-2 uppercase tracking-wider text-sm font-bold">
+                                    <span class="material-symbols-outlined text-sm">rocket_launch</span>
+                                    Nuestra Misión
+                                </div>
+                                <p class="text-gray-300 text-lg font-normal leading-relaxed">
+                                    Impulsar y promover el desarrollo económico, social y tecnológico de la comunidad
+                                    mediante
+                                    el acceso a la tecnología avanzada y la fabricación digital generando acciones
+                                    sociales,
+                                    educativas y de emprendimiento e innovación.
+                                </p>
+                            </div>
+
+                            <div class="flex flex-col gap-4">
+                                <div style="color: #03C3E3;"
+                                    class="flex items-center gap-2 uppercase tracking-wider text-sm font-bold">
+                                    <!-- <span class="material-symbols-outlined text-sm">rocket_launch</span> -->
+                                    <span class="material-symbols-outlined text-sm">visibility</span>
+                                    Visión
+                                </div>
+                                <p class="text-gray-300 text-lg font-normal leading-relaxed">
+                                    Ser el centro de innovación y tecnologías creativas
+                                    líder en la región, entregando un espacio donde la creatividad,
+                                    la colaboración y el aprendizaje continuo
+                                    impulsen el desarrollo sostenible y la
+                                    transformación social de las comunidades.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Apartado de impacto -->
+<div class="layout-container flex w-full flex-col bg-surface-darker/50 py-3 border-y border-[#29382f]">
+    <div class="flex justify-center">
+        <div class="layout-content-container flex w-full max-w-[1280px] flex-col px-4 md:px-10">
+            <div class="w-full max-w-[1280px] px-4 md:px-10 py-10 ">
+                <div class="flex flex-col gap-6">
+                    <div class="flex justify-between items-end mb-4">
+                        <h2
+                            class="text-4xl font-black leading-[1.1] tracking-[-0.033em] text-white md:text-4xl xl:text-6xl">
+                            <span class="text-gray-custom">
+                                Nuestro
+                            </span>
+                            <span
+                                class="bg-gradient-to-r from-[#038FC7] via-[#08A5D3] to-[#03C7E5] bg-clip-text text-transparent">
+                                impacto:
+                            </span>
+
+                        </h2>
+                    </div>
+                </div>
+                <div class="py-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-4xl md:text-5xl font-black text-primary">+2,200</h3>
+                        <p class="text-gray-400 font-medium">Productos personalizados</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-4xl md:text-5xl font-black text-primary">+150</h3>
+                        <p class="text-gray-400 font-medium">Emprendedores beneficiados</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-4xl md:text-5xl font-black text-primary">+15</h3>
+                        <p class="text-gray-400 font-medium">BootCamps/Capacitaciones</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-4xl md:text-5xl font-black text-primary">12</h3>
+                        <p class="text-gray-400 font-medium">Colaboraciones institucionales</p>
+                    </div>
+
+
+                </div>
+                <!-- <div class=" lg:w-1/2 min-h-[500px] bg-center bg-no-repeat bg-cover"
+                    style=' background-image: url("/images/ReporteFab.png");'>
+                </div> -->
+                <a target="_blank" href="https://heyzine.com/flip-book/5ed696c717.html#page/1"
+                    style="background-color: #1C261F;"
+                    class="flex h-14 min-w-[160px] items-center justify-center rounded-full  px-8 text-base font-bold text-[#111814]  shadow-[0_4px_20px_rgba(255, 193, 0, 1)] transition-transform hover:scale-105">
+                    <span class="text-white">Visita nuestro informe de actividades</span>
+                    <span class="text-white material-symbols-outlined ml-2 text-lg">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Apartado de que nos hace diferentes-->
+<div class="layout-container flex w-full flex-col bg-surface-darker/50  border-y border-[#29382f]">
+    <div class="flex justify-center">
+        <div class="layout-content-container flex w-full max-w-[1280px] flex-col px-4 ">
+            <div class="w-full max-w-[1280px] px-4 md:px-10 py-10 pb-20">
+                <div class="flex flex-col gap-6">
+                    <div class="flex justify-between items-end mb-4">
+
+                        <h2
+                            class="text-4xl font-black leading-[1.1] tracking-[-0.033em] text-white md:text-4xl xl:text-5xl">
+                            <span class="text-gray-custom">
+                                ¿Qué nos
+                            </span>
+                            <span
+                                class="bg-gradient-to-r from-[#038FC7] via-[#08A5D3] to-[#03C7E5] bg-clip-text text-transparent">
+                                hace diferentes?
+
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Card 1 -->
+                        <div
+                            class="group flex flex-col gap-4 rounded-xl border border-[#3c5345] bg-[#1c2620] p-6 transition-all hover:border-primary/50 hover:bg-[#001D8B]">
+                            <div
+                                class="w-12 h-12 rounded-full bg-background-dark flex items-center justify-center border border-[#3c5345] group-hover:border-primary/50 group-hover:bg-[#01A7A4] text-white transition-colors">
+                                <span class="material-symbols-outlined text-2xl">memory</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-white text-xl font-bold">Tecnología In-House:</h3>
+                                <p class="text-[#9db8a8] text-sm leading-relaxed">
+                                    Todas las máquinas (Láser, CNC, 3D) están aquí, listas para usar.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="group flex flex-col gap-4 rounded-xl border border-[#3c5345] bg-[#1c2620] p-6 transition-all hover:border-primary/50 hover:bg-[#001D8B]">
+                            <div
+                                class="w-12 h-12 rounded-full bg-background-dark flex items-center justify-center border border-[#3c5345] group-hover:border-primary/50 group-hover:bg-[#01A7A4] text-white transition-colors">
+                                <span class="material-symbols-outlined text-2xl">school</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-white text-xl font-bold">Certificación Global</h3>
+                                <p class="text-[#9db8a8] text-sm leading-relaxed">
+                                    Operamos bajo los estándares de la FabLab Network.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="group flex flex-col gap-4 rounded-xl border border-[#3c5345] bg-[#1c2620] p-6 transition-all hover:border-primary/50 hover:bg-[#001D8B]">
+                            <div
+                                class="w-12 h-12 rounded-full bg-background-dark flex items-center justify-center border border-[#3c5345] group-hover:border-primary/50 group-hover:bg-[#01A7A4] text-white transition-colors">
+                                <span class="material-symbols-outlined text-2xl">groups</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-white text-xl font-bold">Enfoque Comercial y Educativo: </h3>
+                                <p class="text-[#9db8a8] text-sm leading-relaxed">
+                                    Te ayudamos tanto si necesitas una maquila urgente como si quieres aprender a
+                                    hacerlo tú mismo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Solicita tu presupuesto -->
+<section class="w-full  max-w-[960px] mx-auto text-center">
+    <div class="rounded-[2.5rem] md:p-8 flex flex-col items-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1  from-transparent via-primary to-transparent opacity-50">
+        </div>
+        <div class="flex justify-between items-end mb-4">
+
+            <h2 class="text-4xl font-black leading-[1.1] tracking-[-0.033em] text-white md:text-4xl xl:text-5xl">
+                <span class="text-gray-custom">
+                    Solicita
+                </span>
+                <span class="bg-gradient-to-r from-[#038FC7] via-[#08A5D3] to-[#03C7E5] bg-clip-text text-transparent">
+                    tu presupuesto
+
+                </span>
+            </h2>
+        </div>
+        <p class="text-[#a0b0a8] text-lg max-w-lg z-10">Describe tu idea, sube tus archivos y nuestro equipo técnico
+            analizará la viabilidad para darte la mejor solución.</p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-4 z-10 w-full justify-center">
+            <a routerLink="/servicios"
+                class="verdeFuerteFab flex h-14 min-w-[160px] items-center justify-center rounded-full  px-8 text-base font-bold text-[#111814]  shadow-[0_4px_20px_rgba(255, 193, 0, 1)] transition-transform hover:scale-105">
+                <span class="text-white">Contactanos</span>
+            </a>
+        </div>
+        <!-- Abstract decorative blur behind -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-[80px]">
+        </div>
+    </div>
+</section>
+
+
+<!-- <div style="background-color: #eff5fb;"
+    class="flex min-h-[120px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center p-8  relative overflow-hidden"
+    data-alt="Futuristic 3D printer glowing green in dark lab">
+    <h4 class="text-1xl text-black mb-10 flex items-center">
+        <span class="material-symbols-outlined mr-4 text-primary text-4xl">gavel</span>
+        Términos y Condiciones del Laboratorio
+    </h4>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+
+        <div>
+            <h4 class="text-slate-900 mb-4 uppercase tracking-wider text-xs">
+                Uso de Maquinaria</h4>
+            <p class="mb-4">Es obligatorio completar la formación básica de seguridad antes de operar
+                cualquier máquina CNC, láser o impresora 3D. El mal uso de los equipos puede resultar en
+                la suspensión de la membresía.</p>
+            <p>Los materiales no están incluidos en la cuota mensual. Disponemos de una tienda de
+                consumibles o puedes traer tus propios materiales aprobados por el técnico.</p>
+        </div>
+        <div>
+            <h4 class="text-slate-900  mb-4 uppercase tracking-wider text-xs">
+                Propiedad Intelectual</h4>
+            <p class="mb-4">Fab Lab Saúl no reclama propiedad sobre los diseños creados en nuestras
+                instalaciones. Sin embargo, fomentamos la cultura Open Source y compartir conocimientos
+                con la comunidad.</p>
+            <p>El laboratorio es un espacio de co-working respetuoso; queda terminantemente prohibido el
+                prototipado de armas o cualquier objeto ilegal.</p>
+        </div>
+        <div>
+            <h4 class="text-slate-900  mb-4 uppercase tracking-wider text-xs">
+                Cancelaciones</h4>
+            <p class="mb-4">Las suscripciones son mensuales y no tienen permanencia. Puedes cancelar en
+                cualquier momento avisando con 5 días de antelación al cierre del ciclo de facturación.
+            </p>
+            <p>No se realizan reembolsos parciales por días no utilizados durante el mes corriente.</p>
+        </div>
+        <div>
+            <h4 class="text-slate-900  mb-4 uppercase tracking-wider text-xs">
+                Seguridad y Salud</h4>
+            <p class="mb-4">Es obligatorio el uso de EPIs (gafas, protectores auditivos) en las zonas de
+                fabricación pesada señalizadas. El laboratorio no se hace responsable de accidentes por
+                negligencia.</p>
+            <p>Todos los miembros deben mantener su zona de trabajo limpia al finalizar cada sesión.</p>
+        </div>
+    </div>
+</div> -->

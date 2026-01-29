@@ -1,51 +1,186 @@
-<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-    <section class="dark bg-background-light text-[#111814] dark:bg-background-dark dark:text-white">
+<div class="relative flex w-full flex-col group/design-root overflow-x-hidden">
+    <section>
         <!-- NAV (fixed) -->
-        <header class="fixed left-0 top-0 z-50 w-full border-b border-[#29382f] bg-background-dark/80 backdrop-blur-md">
-            <div class="mx-auto flex w-full max-w-[1280px] items-center justify-between px-4 py-3 md:px-10">
+        <header style="background: linear-gradient(135deg, #001D8B 0%, #03c9e6 100%);" class="fixed left-0 top-0 z-50 w-full
+         border-b border-[var(--border-dark)]
+         backdrop-blur-md">
+            <div class="mx-auto flex w-full max-w-[1366px] items-center justify-between px-4 py-3 md:px-10">
                 <!-- Brand -->
-                <div class="flex items-center gap-4 text-white">
-                    <div class="size-8 text-primary">
-                        <svg class="h-full w-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" />
-                        </svg>
-                    </div>
-                    <h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">Fab Lab Saúl</h2>
-                </div>
-
+                <img src="/images/fabblancoo.png" alt="FabLab" class="h-8 w-auto md:h-10 lg:h-12 object-contain">
                 <!-- Desktop Nav -->
                 <nav class="hidden flex-1 items-center justify-end gap-8 lg:flex">
                     <div class="flex items-center gap-9">
-                        <a class="text-sm font-medium text-white/80 transition-colors hover:text-primary" href="#">
-                            Servicios
-                        </a>
-                        <a class="text-sm font-medium text-white/80 transition-colors hover:text-primary" href="#">
-                            Taller para fabricar tú
-                        </a>
-                        <a class="text-sm font-medium text-white/80 transition-colors hover:text-primary" href="#">
-                            Innovar productos y procesos
-                        </a>
-                        <a class="text-sm font-medium text-white/80 transition-colors hover:text-primary" href="#">
-                            Emprender con tus productos
-                        </a>
-                        <a class="text-sm font-medium text-white/80 transition-colors hover:text-primary" href="#">
-                            Comunidad y formación
-                        </a>
+
+                        <!-- Dropdown Servicios-->
+                        <div class="relative">
+                            <div class="relative">
+                                <button class="text-white" (click)="toggleDropdown('servicios')">
+                                    Servicios
+                                </button>
+
+                                <div *ngIf="dropdowns['servicios']"
+                                    class="absolute  mt-2 text-white  shadow-lg fondoVerdeOscuro w-96">
+                                    <a class="block px-4 py-2 hover:bg-[#0056AA] cursor-pointer"
+                                        (click)="scrollToSection('servicio-1')">
+                                        Impresión 3D a medida
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
+                                        (click)="scrollToSection('servicio-2')">
+                                        Corte y grabado láser
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
+                                        (click)="scrollToSection('servicio-3')">
+                                        Fresado CNC y carpintería digital
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
+                                        (click)="scrollToSection('servicio-4')">
+                                        Electrónica y montaje básico
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
+                                        (click)="scrollToSection('servicio-5')">
+                                        Prototipos y maquetas para empresas
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown Taller -->
+                        <div class="relative">
+                            <div class="relative">
+                                <button class="text-white" (click)="toggleDropdown('taller')">
+                                    Taller para fabricar tú
+                                </button>
+
+                                <div *ngIf="dropdowns['taller']"
+                                    class="absolute  mt-2 text-white  shadow-lg fondoVerdeOscuro w-96">
+                                    <a class="block px-4 py-2 hover:bg-[#0565B2]  cursor-pointer"
+                                        (click)="scrollToSection('taller-1')">
+                                        Qué es el taller compartido
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#0565B2] cursor-pointer"
+                                        (click)="scrollToSection('taller-2')">
+                                        Máquinas disponibles
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#0565B2] cursor-pointer"
+                                        (click)="scrollToSection('taller-3')">
+                                        Cómo empezar
+                                    </a>
+                                    <a class="block px-4 py-2  hover:bg-[#0565B2]  cursor-pointer"
+                                        (click)="scrollToSection('taller-4')">
+                                        Bonos y membresías
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#0565B2]  cursor-pointer"
+                                        (click)="scrollToSection('taller-5')">
+                                        Reservar una máquina
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown innovar -->
+                        <div class="relative">
+                            <div class="relative">
+                                <button class="text-white" (click)="toggleDropdown('innovar')">
+                                    Innovar productos y procesos
+                                </button>
+
+                                <div *ngIf="dropdowns['innovar']"
+                                    class="absolute  mt-2 text-white  shadow-lg fondoVerdeOscuro w-96">
+                                    <a class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
+                                        (click)="scrollToSection('innovar-1')">
+                                        Mejora de productos existentes
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
+                                        (click)="scrollToSection('innovar-2')">
+                                        Desarrollo de nuevos prototipos
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
+                                        (click)="scrollToSection('innovar-3')">
+                                        Proyectos con empresas e instituciones
+
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
+                                        (click)="scrollToSection('innovar-4')">
+                                        Sesiones de ideación y pruebas
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
+                                        (click)="scrollToSection('innovar-5')">
+                                        Reservar una máquina
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown Emprender con tus productos -->
+                        <div class="relative">
+                            <div class="relative">
+                                <button class="text-white" (click)="toggleDropdown('emprender')">
+                                    Emprender con tus productos
+                                </button>
+
+                                <div *ngIf="dropdowns['emprender']"
+                                    class="absolute  mt-2 text-white  shadow-lg fondoVerdeOscuro w-96">
+                                    <a class="block px-4 py-2 hover:bg-[#0096CB] cursor-pointer"
+                                        (click)="scrollToSection('emprender-1')">
+                                        Te ayudamos a montar tu negocio
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#0096CB]  cursor-pointer"
+                                        (click)="scrollToSection('emprender-2')">
+                                        Programas y acompañamiento
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#0096CB]  cursor-pointer"
+                                        (click)="scrollToSection('emprender-3')">
+                                        Casos de personas que ya venden
+
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#0096CB] cursor-pointer"
+                                        (click)="scrollToSection('emprender-4')">
+                                        Recursos para vender tu producto
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Dropdown Comunidad y formación -->
+                        <div class="relative">
+                            <div class="relative">
+                                <button class="text-white" (click)="toggleDropdown('comunidad')">
+                                    Comunidad y formación
+                                </button>
+
+                                <div *ngIf="dropdowns['comunidad']"
+                                    class="absolute  mt-2 text-white  shadow-lg fondoVerdeOscuro w-96">
+                                    <a class="block px-4 py-2 hover:bg-[#08a5d0] cursor-pointer"
+                                        (click)="scrollToSection('comunidad-1')">
+                                        Quiénes somos
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#08a5d0] cursor-pointer"
+                                        (click)="scrollToSection('comunidad-2')">
+                                        Comunidad de usuarios
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#08a5d0] cursor-pointer"
+                                        (click)="scrollToSection('comunidad-3')">
+                                        Talleres, cursos y eventos
+                                    </a>
+                                    <a class="block px-4 py-2 hover:bg-[#08a5d0] cursor-pointer"
+                                        (click)="scrollToSection('comunidad-4')">
+                                        Recursos y guía
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Links normales -->
+
+                        <!-- Botón Acerca de Nosotros con scroll suave -->
+                        <!-- <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors cursor-pointer"
+                            (click)="scrollToSection('acerca-de-nosotros')">
+                            Acerca de Nosotros
+                        </a> -->
                     </div>
-
-                    <!-- <div class="flex gap-3">
-                    <button
-                        class="flex h-10 items-center justify-center rounded-full border border-[#3c5345] bg-[#29382f] px-6 text-sm font-bold text-white transition-colors hover:bg-[#3c5345]">
-                        Log In
-                    </button>
-
-                    <button
-                        class="flex h-10 items-center justify-center rounded-full bg-primary px-6 text-sm font-bold text-[#111814] shadow-[0_0_20px_rgba(48,232,122,0.3)] transition-colors hover:bg-primary/90">
-                        Join Now
-                    </button>
-                </div> -->
                 </nav>
+
 
                 <!-- Mobile icon -->
                 <button class="cursor-pointer text-white lg:hidden" type="button" aria-label="Open menu">
@@ -53,121 +188,5 @@
                 </button>
             </div>
         </header>
-
-        <!-- HERO -->
-        <div class="mx-auto mt-20 w-full max-w-[1280px] px-4 py-8 md:px-10 md:py-12">
-            <div class="flex min-h-[600px] flex-col items-stretch gap-8 lg:flex-row lg:gap-12">
-                <!-- Left -->
-                <div class="order-2 flex flex-1 flex-col justify-center gap-8 lg:order-1 lg:pr-8">
-                    <div class="flex flex-col gap-6 text-left">
-                        <div
-                            class="inline-flex w-fit items-center gap-2 rounded-full border border-[#3c5345] bg-[#1c2620] px-3 py-1">
-                            <span class="h-2 w-2 animate-pulse rounded-full bg-primary"></span>
-                            <span class="text-xs font-bold uppercase tracking-wider text-primary">
-                                Abierto para creadores 24/7
-                            </span>
-                        </div>
-
-                        <h1
-                            class="text-5xl font-black leading-[1.1] tracking-[-0.033em] text-white md:text-6xl xl:text-7xl">
-                            <span class="text-gray-custom"> 
-                                Donde la creatividad
-                            </span> 
-                            <span class="bg-gradient-to-r from-primary to-teal-400 bg-clip-text text-transparent">
-                                se fusiona con la artesanía digital
-                            </span>
-                        </h1>
-
-                        <p class="max-w-[600px] text-lg font-light leading-relaxed text-gray-500 md:text-xl" id="texto-jutificado">
-                            Empoderando a creadores, estudiantes, emprendedores y artesanos para convertir sus ideas en
-                            realidad. Accede a cortadoras láser, impresoras 3D  en un
-                            espacio comunitario colaborativo.
-                        </p>
-                    </div>
-
-                    <div class="mt-2 flex flex-wrap gap-4">
-                        <button
-                            class="flex h-14 min-w-[160px] items-center justify-center rounded-full bg-primary px-8 text-base font-bold text-[#111814] shadow-[0_4px_20px_rgba(48,232,122,0.4)] transition-transform hover:scale-105">
-                            <span>Inicia tu proyecto</span>
-                            <span class="material-symbols-outlined ml-2 text-lg">arrow_forward</span>
-                        </button>
-
-                        <button
-                            class="flex h-14 min-w-[160px] items-center justify-center rounded-full border border-[#3c5345] bg-transparent px-8 text-base font-bold text-gray transition-colors hover:bg-[#1c2620]">
-                            Acerca de nosotros
-                        </button>
-                    </div>
-
-                    <!-- <div class="flex items-center gap-4 pt-4">
-                        <div class="flex -space-x-3">
-                            <div
-                                class="h-10 w-10 overflow-hidden rounded-full border-2 border-background-dark bg-gray-500">
-                                <img class="h-full w-full object-cover" alt="Member"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAByQ59d6tJROSdzInY73Sz95Po6-CeLt6eTJlzKGRXQH2qZklfdzHdvE49bY6mjEHOXsyxioFTiaZZdt5EbkQHnEO_xEzLilY-8Cv_lOVMSvraCcn6MXS2wCN04PL2VcdR3WGXdxFSQZcyGMT1uwEm9J6J2jgXxdAkc_tVfod-yRZv6YOd3X8r7-jCb-wi6IcjEW0X_4cSwyQ4W0aJp2AfabKAq2s21T_4lmujsw5HDw6AlVwK8Zu3p_m3s_zWIOGJ7baf6EEF2J4" />
-                            </div>
-
-                            <div
-                                class="h-10 w-10 overflow-hidden rounded-full border-2 border-background-dark bg-gray-500">
-                                <img class="h-full w-full object-cover" alt="Member"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVawXNNQjnkqp4A9n4BEXuuhtKdjZysUmF9Vj6CVktfFEFdK5BB-prFOe5JHt8L8v4eB_KnBRB3hlXPUx3CrMz9jTa7tGoVxI9rDqWXnsMnsd1DlIkMMPLmCSxZLrawTdPJQAygtdG0Vy0TGdYez6TW_XcPCpc6rD4G_xv-zZ4O5nu9PfjJKxmnuBYCry2jFAVDgKxdWFx0GFDUci6_dxhj-xYeU0U6AfDWxmgwtlCFFCMXlTb1AqXXLiQ4ubIyg2i-riO1LQ78BU" />
-                            </div>
-
-                            <div
-                                class="h-10 w-10 overflow-hidden rounded-full border-2 border-background-dark bg-gray-500">
-                                <img class="h-full w-full object-cover" alt="Member"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDGjm60J1HFSM8-oL9tnEH9Rr-hO3Mu-v2gkUM9QaKqlXbqx0ws9pYeJUj9tPySBlrEPv5pfUB5WqJ2DsjaH5QDiKuoFeWguCNExesLogqBz3LTtsRGWOljBv4GeDY6foeyFqRYOgIxo4ZFIOJb1GU3xBMzWyQQ19ic0X8xgrEU8Wqms9CZ2bCO5foRNhV_FutWw8jAYlKjlEwNAZaq_c8AkVss9jHIsvP--e5rw34QiR37Z9-2kj-5QIYP_Gf8VHqLouqB-SFLSo" />
-                            </div>
-
-                            <div
-                                class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-background-dark bg-[#3c5345] text-xs font-bold text-white">
-                                +500
-                            </div>
-                        </div>
-
-                        <p class="text-sm text-gray-400">Active makers this month</p>
-                    </div> -->
-                </div>
-
-                <!-- Right visual -->
-                <div class="order-1 relative min-h-[400px] flex-1 lg:order-2">
-                    <div class="absolute inset-0 overflow-hidden rounded-xl group">
-                        <div
-                            class="absolute inset-0 z-10 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent">
-                        </div>
-
-                        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                            style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6ZZjjOfCWR7T3n0TfcL0FOX0FNdGy7vEQShtFJeLCZgjGeyLeOzevzh4-UGjlm7WlVY0P8KXVC9v58UOZjGQfcszYGUfHHJXlRQIi8gP6Qbe4x5XYqx2pV4FVnwF0pa3WhmvRAWmMLW1dgnUJXMFq9Jvn8hrIyxQ_awFf6u3eMfEy3ZITh1vBCEs7GsDaYaONpHF4OIGNIrL-rwkiABLdnmeyMz0QsybaxkzHFCq_SWVJu_fprzUtl-3lyTI_q0iJTcnpH4d5k1E");'>
-                        </div>
-
-                        <!-- Floating card -->
-                        <div
-                            class="absolute bottom-6 left-6 right-6 z-20 rounded-lg border border-[#3c5345] bg-[#1c2620]/90 p-4 shadow-xl backdrop-blur-sm">
-                            <div class="flex items-center gap-4">
-                                <div class="rounded-full bg-primary/20 p-3 text-primary">
-                                    <span class="material-symbols-outlined">precision_manufacturing</span>
-                                </div>
-
-                                <div>
-                                    <p class="font-bold text-white">¿Eres nuevo?</p>
-                                    <p class="text-sm text-[#9db8a8]">Cómo empezar (formación básica)</p>
-                                </div>
-
-                                <div class="ml-auto">
-                                    <button class="text-primary transition-colors hover:text-white" type="button"
-                                        aria-label="Open">
-                                        <span class="material-symbols-outlined">arrow_forward</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Decorative glow -->
-                    <div
-                        class="pointer-events-none absolute -right-10 -top-10 z-0 h-32 w-32 bg-primary opacity-40 blur-[80px]">
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 </div>
