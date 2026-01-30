@@ -1,11 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { Scroll } from '../../../../services/scroll';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf,RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -55,3 +56,4 @@ export class HeaderComponent {
     this.scrollService.scrollToSection(sectionId);
   }
 }
+ 

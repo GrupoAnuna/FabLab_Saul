@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Scroll } from '../../../services/scroll';
-
+import { Scroll } from 'app/services/scroll';
 
 @Component({
-  selector: 'app-talleres',
+  selector: 'app-pagina-temp',
   imports: [RouterLink],
-  templateUrl: './talleres.html',
-  styleUrl: './talleres.css',
+  templateUrl: './pagina-temp.html',
+  styleUrl: './pagina-temp.css',
 })
-export class Talleres {
+export class PaginaTemp {
   constructor(private scrollService: Scroll) { }
 
   scrollToSection(sectionId: string) {

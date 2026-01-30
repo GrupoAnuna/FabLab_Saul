@@ -4,12 +4,12 @@ import { Scroll } from '../../../services/scroll';
 
 
 @Component({
-  selector: 'app-talleres',
+  selector: 'app-error',
   imports: [RouterLink],
-  templateUrl: './talleres.html',
-  styleUrl: './talleres.css',
+  templateUrl: './error.html',
+  styleUrl: './error.css',
 })
-export class Talleres {
+export class Error {
   constructor(private scrollService: Scroll) { }
 
   scrollToSection(sectionId: string) {

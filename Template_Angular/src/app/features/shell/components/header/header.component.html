@@ -6,7 +6,9 @@
          backdrop-blur-md">
             <div class="mx-auto flex w-full max-w-[1366px] items-center justify-between px-4 py-3 md:px-10">
                 <!-- Brand -->
-                <img src="/images/fabblancoo.png" alt="FabLab" class="h-8 w-auto md:h-10 lg:h-12 object-contain">
+                <a routerLink="/">
+                    <img src="/images/fabblancoo.png" alt="FabLab" class="h-8 w-auto md:h-10 lg:h-12 object-contain">
+                </a>
                 <!-- Desktop Nav -->
                 <nav class="hidden flex-1 items-center justify-end gap-8 lg:flex">
                     <div class="flex items-center gap-9">
@@ -20,23 +22,27 @@
 
                                 <div *ngIf="dropdowns['servicios']"
                                     class="absolute  mt-2 text-white  shadow-lg fondoVerdeOscuro w-96">
-                                    <a class="block px-4 py-2 hover:bg-[#0056AA] cursor-pointer"
+                                    <a routerLink="/servicios" class="block px-4 py-2 hover:bg-[#0056AA] cursor-pointer"
                                         (click)="scrollToSection('servicio-1')">
                                         Impresión 3D a medida
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
+                                    <a routerLink="/servicios"
+                                        class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
                                         (click)="scrollToSection('servicio-2')">
                                         Corte y grabado láser
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
+                                    <a routerLink="/servicios"
+                                        class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
                                         (click)="scrollToSection('servicio-3')">
                                         Fresado CNC y carpintería digital
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
+                                    <a routerLink="/servicios"
+                                        class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
                                         (click)="scrollToSection('servicio-4')">
                                         Electrónica y montaje básico
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
+                                    <a routerLink="/servicios"
+                                        class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
                                         (click)="scrollToSection('servicio-5')">
                                         Prototipos y maquetas para empresas
                                     </a>
@@ -53,23 +59,24 @@
 
                                 <div *ngIf="dropdowns['taller']"
                                     class="absolute  mt-2 text-white  shadow-lg fondoVerdeOscuro w-96">
-                                    <a class="block px-4 py-2 hover:bg-[#0565B2]  cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion" class="block px-4 py-2 hover:bg-[#0565B2]  cursor-pointer"
                                         (click)="scrollToSection('taller-1')">
                                         Qué es el taller compartido
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#0565B2] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion"  class="block px-4 py-2 hover:bg-[#0565B2] cursor-pointer"
                                         (click)="scrollToSection('taller-2')">
                                         Máquinas disponibles
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#0565B2] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion"  class="block px-4 py-2 hover:bg-[#0565B2] cursor-pointer"
                                         (click)="scrollToSection('taller-3')">
                                         Cómo empezar
                                     </a>
-                                    <a class="block px-4 py-2  hover:bg-[#0565B2]  cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion" 
+                                        class="block px-4 py-2  hover:bg-[#0565B2]  cursor-pointer"
                                         (click)="scrollToSection('taller-4')">
                                         Bonos y membresías
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#0565B2]  cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion"  class="block px-4 py-2 hover:bg-[#0565B2]  cursor-pointer"
                                         (click)="scrollToSection('taller-5')">
                                         Reservar una máquina
                                     </a>
@@ -86,24 +93,24 @@
 
                                 <div *ngIf="dropdowns['innovar']"
                                     class="absolute  mt-2 text-white  shadow-lg fondoVerdeOscuro w-96">
-                                    <a class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion"  class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
                                         (click)="scrollToSection('innovar-1')">
                                         Mejora de productos existentes
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion"  class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
                                         (click)="scrollToSection('innovar-2')">
                                         Desarrollo de nuevos prototipos
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion"  class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
                                         (click)="scrollToSection('innovar-3')">
                                         Proyectos con empresas e instituciones
 
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion"  class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
                                         (click)="scrollToSection('innovar-4')">
                                         Sesiones de ideación y pruebas
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion"  class="block px-4 py-2 hover:bg-[#027DBD] cursor-pointer"
                                         (click)="scrollToSection('innovar-5')">
                                         Reservar una máquina
                                     </a>
@@ -120,20 +127,20 @@
 
                                 <div *ngIf="dropdowns['emprender']"
                                     class="absolute  mt-2 text-white  shadow-lg fondoVerdeOscuro w-96">
-                                    <a class="block px-4 py-2 hover:bg-[#0096CB] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion" class="block px-4 py-2 hover:bg-[#0096CB] cursor-pointer"
                                         (click)="scrollToSection('emprender-1')">
                                         Te ayudamos a montar tu negocio
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#0096CB]  cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion" class="block px-4 py-2 hover:bg-[#0096CB]  cursor-pointer"
                                         (click)="scrollToSection('emprender-2')">
                                         Programas y acompañamiento
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#0096CB]  cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion" class="block px-4 py-2 hover:bg-[#0096CB]  cursor-pointer"
                                         (click)="scrollToSection('emprender-3')">
                                         Casos de personas que ya venden
 
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#0096CB] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion" class="block px-4 py-2 hover:bg-[#0096CB] cursor-pointer"
                                         (click)="scrollToSection('emprender-4')">
                                         Recursos para vender tu producto
                                     </a>
@@ -151,33 +158,25 @@
 
                                 <div *ngIf="dropdowns['comunidad']"
                                     class="absolute  mt-2 text-white  shadow-lg fondoVerdeOscuro w-96">
-                                    <a class="block px-4 py-2 hover:bg-[#08a5d0] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion" class="block px-4 py-2 hover:bg-[#08a5d0] cursor-pointer"
                                         (click)="scrollToSection('comunidad-1')">
                                         Quiénes somos
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#08a5d0] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion" class="block px-4 py-2 hover:bg-[#08a5d0] cursor-pointer"
                                         (click)="scrollToSection('comunidad-2')">
                                         Comunidad de usuarios
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#08a5d0] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion" class="block px-4 py-2 hover:bg-[#08a5d0] cursor-pointer"
                                         (click)="scrollToSection('comunidad-3')">
                                         Talleres, cursos y eventos
                                     </a>
-                                    <a class="block px-4 py-2 hover:bg-[#08a5d0] cursor-pointer"
+                                    <a routerLink="/pagina_en_construccion" class="block px-4 py-2 hover:bg-[#08a5d0] cursor-pointer"
                                         (click)="scrollToSection('comunidad-4')">
                                         Recursos y guía
                                     </a>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Links normales -->
-
-                        <!-- Botón Acerca de Nosotros con scroll suave -->
-                        <!-- <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors cursor-pointer"
-                            (click)="scrollToSection('acerca-de-nosotros')">
-                            Acerca de Nosotros
-                        </a> -->
                     </div>
                 </nav>
 

@@ -1,0 +1,103 @@
+<section class="layout-container flex w-full flex-col py-16">
+    <div class="flex justify-center">
+        <div class="layout-content-container flex w-full max-w-[1280px] flex-col  md:px-10">
+            <div class="@container">
+                <div class="@[480px]:p-4">
+                    <div class="flex min-h-[120px] flex-col bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-8 text-center relative overflow-hidden"
+                        data-alt="Futuristic 3D printer glowing green in dark lab">
+
+
+
+                        <!-- Central Content Card -->
+                        <div class="relative z-10 w-full max-w-[640px] px-6">
+                            <div style="background-color: #1C2620 !important;"
+                                class="dark:bg-background-dark/95 backdrop-blur-md p-8 md:p-12 rounded-xl shadow-2xl border border-white/20">
+                                <!-- Headline -->
+                                <div class="text-center mb-6">
+                                    <span
+                                        class="inline-block px-3 py-1 verdeFuerteFab text-white  text-xs font-bold uppercase tracking-widest rounded-full mb-4">
+                                        En Proceso
+                                    </span>
+                                    <h1
+                                        class="text-[#0d1b0f] dark:text-white text-3xl md:text-4xl font-bold leading-tight">
+                                        Estamos cultivando algo nuevo
+                                    </h1>
+                                </div>
+                                <!-- Body Text -->
+                                <p
+                                    class="text-[#3a4d3d] dark:text-gray-300 text-base md:text-lg text-center leading-relaxed mb-10">
+                                    Nuestra nueva experiencia digital está creciendo para ofrecerte lo mejor. <br>Muy
+                                    pronto podrás visulizar estos apartados.
+                                </p>
+                                <!-- Progress Bar Styled as Vine -->
+                                <div class="flex flex-col gap-3 mb-12">
+                                    <div class="flex justify-between items-end">
+                                        <div class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined naranjaFab text-xl">eco</span>
+                                            <p class="text-[#0d1b0f] dark:text-white text-sm font-semibold">
+                                                Desarrollando
+                                                los últimos
+                                                detalles</p>
+                                        </div>
+                                        <p class="naranjaFab text-lg font-bold">85%</p>
+                                    </div>
+                                    <div
+                                        class="relative h-3 w-full bg-[#cfe7d2] dark:bg-white/10 rounded-full overflow-hidden">
+                                        <div class="absolute top-0 left-0 h-full verdeFuerteFab rounded-full shadow-[0_0_10px_rgba(24,236,45,0.5)]"
+                                            style="width: 85%;"></div>
+                                    </div>
+                                    <p class="naranjaFab text-xs italic">Casi listo...</p>
+                                </div>
+                                <!-- Newsletter Signup -->
+                                <div class="space-y-4">
+                                    <p class="text-[#0d1b0f] dark:text-white text-sm font-medium text-center">Sé el
+                                        primero en recibir
+                                        la noticia cuando estemos listos:</p>
+                                    <div class="flex flex-col sm:flex-row gap-2">
+                                        <input
+                                            class="flex-grow h-12 px-4 rounded-lg border border-gray-200 dark:border-white/10 dark:bg-white/5 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm"
+                                            placeholder="Tu correo electrónico" type="email" />
+                                        <a routerLink="/servicios"
+                                            class="flex h-12 min-w-[200px] items-center justify-center rounded-full  px-8 text-base font-bold text-[#111814] azulFab shadow-[0_4px_20px_rgba(255, 193, 0, 1)] transition-transform hover:scale-105">
+                                            <span class="text-white">Notificarme</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-4 max-w-[800px] z-10 py-5">
+                            <h2
+                                class="text-5xl font-black leading-[1.1] tracking-[-0.033em] text-white md:text-5xl xl:text-3xl">
+                                <span class="text-gray-custom">
+                                    Retoma la
+                                </span>
+                                <span
+                                    class="bg-gradient-to-r from-[#038FC7] via-[#08A5D3] to-[#03C7E5] bg-clip-text text-transparent">
+                                    navegación
+                                </span>
+                            </h2>
+                        </div>
+
+                        <div class="mt-2 flex flex-wrap gap-4">
+                            <a routerLink="/servicios"
+                                class="flex h-14 min-w-[160px] items-center justify-center rounded-full  px-8 text-base font-bold text-[#111814] verdeFuerteFab shadow-[0_4px_20px_rgba(255, 193, 0, 1)] transition-transform hover:scale-105">
+                                <span class="text-white">Nuestros servicios</span>
+                                <span class="text-white material-symbols-outlined ml-2 text-lg">arrow_forward</span>
+                            </a>
+
+                            <button routerLink="/" 
+                                class="flex h-14 min-w-[160px] items-center justify-center rounded-full bg-surface-dark border border-[#3c5345]  px-8 text-base font-bold text-gray transition-colors hover:bg-[#FF791D]"
+                                (click)="scrollToSection('acerca-de-nosotros')">
+                                Acerca de nosotros
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
