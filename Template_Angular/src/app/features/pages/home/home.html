@@ -1,6 +1,7 @@
 <!-- Apartado home -->
 <!-- Primer apartado presentación-->
-<div class="mx-auto mt-20 w-full max-w-[1280px] py-8 md:px-10 md:py-12" style="padding-left:1rem ;padding-right: 1rem;">
+<div id="inicio" class="mx-auto mt-20 w-full max-w-[1280px] py-8 md:px-10 md:py-12"
+    style="padding-left:1rem ;padding-right: 1rem;">
     <div class="flex min-h-[600px] flex-col items-stretch gap-8 lg:flex-row lg:gap-12">
 
         <div class="order-2 flex flex-1 flex-col justify-center gap-8 lg:order-1 lg:pr-8">
@@ -15,12 +16,12 @@
 
                 <h1 class="text-5xl font-black leading-[1.1] tracking-[-0.033em] text-white md:text-6xl xl:text-6xl">
                     <span class="text-gray-custom">
-                        Democratizamos la tecnología
+                        Facilitamos y centralizamos la fabricación de
                     </span>
 
                     <span
                         class="bg-gradient-to-r from-[#038FC7] via-[#08A5D3] to-[#03C7E5] bg-clip-text text-transparent">
-                        a todos aquellos con interés en la fabricación digital
+                        tus proyectos, en un solo lugar.
                     </span>
 
                     <!-- <span class="bg-gradient-to-r from-[#FFC100] to-teal-400 bg-clip-text text-transparent">
@@ -37,7 +38,7 @@
             </div>
 
             <div class="mt-2 flex flex-wrap gap-4">
-                <a routerLink="/servicios"
+                <a (click)="scrollToSection('serviciosGenerales')"
                     class="flex h-14 min-w-[160px] items-center justify-center rounded-full  px-8 text-base font-bold text-[#111814] verdeFuerteFab shadow-[0_4px_20px_rgba(255, 193, 0, 1)] transition-transform hover:scale-105">
                     <span class="text-white">Nuestros servicios</span>
                     <span class="text-white material-symbols-outlined ml-2 text-lg">arrow_forward</span>
@@ -116,10 +117,11 @@
                             </h2>
                             <p class="text-lg font-light leading-relaxed text-gray-500 md:text-xl"
                                 id="texto-jutificado">
+                                Somos un Centro de fabricación digital parte de la red global FABLAB Network
                                 Somos un Centro de Fabricación Digital parte de la red global FabLab <a style=""
                                     class="naranjaFab" target="_blank" href="https://www.fablabs.io/">Network.</a>
-                                Diseñamos, cortamos y fabricamos tus ideas con tecnología industrial, desde piezas
-                                únicas hasta producción para empresas.
+                                Donde diseñamos y convertimos ideas en proyectos fabricables y tangibles para toda la
+                                comunidad.
                             </p>
                         </div>
                     </div>
@@ -142,11 +144,9 @@
                                     Nuestra Misión
                                 </div>
                                 <p class="text-gray-300 text-lg font-normal leading-relaxed">
-                                    Impulsar y promover el desarrollo económico, social y tecnológico de la comunidad
-                                    mediante
-                                    el acceso a la tecnología avanzada y la fabricación digital generando acciones
-                                    sociales,
-                                    educativas y de emprendimiento e innovación.
+                                    Empoderar a la comunidad facilitando el acceso a la fabricación digital y
+                                    tecnologías de vanguardia,
+                                    para transformar ideas en proyectos de alto impacto educativo, social y económico.
                                 </p>
                             </div>
 
@@ -158,11 +158,9 @@
                                     Visión
                                 </div>
                                 <p class="text-gray-300 text-lg font-normal leading-relaxed">
-                                    Ser el centro de innovación y tecnologías creativas
-                                    líder en la región, entregando un espacio donde la creatividad,
-                                    la colaboración y el aprendizaje continuo
-                                    impulsen el desarrollo sostenible y la
-                                    transformación social de las comunidades.
+                                    Ser el nodo de referencia regional en innovación y creatividad, donde la
+                                    colaboración y la tecnología se unen para impulsar
+                                    el desarrollo sostenible y transformar el futuro de nuestras comunidades.
                                 </p>
                             </div>
                         </div>
@@ -197,7 +195,7 @@
                 <div class="py-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div class="flex flex-col gap-2">
                         <h3 class="text-4xl md:text-5xl font-black text-primary">+2,200</h3>
-                        <p class="text-gray-400 font-medium">Productos personalizados</p>
+                        <p class="text-gray-400 font-medium">Proyectos finalizados</p>
                     </div>
                     <div class="flex flex-col gap-2">
                         <h3 class="text-4xl md:text-5xl font-black text-primary">+150</h3>
@@ -208,7 +206,7 @@
                         <p class="text-gray-400 font-medium">BootCamps/Capacitaciones</p>
                     </div>
                     <div class="flex flex-col gap-2">
-                        <h3 class="text-4xl md:text-5xl font-black text-primary">12</h3>
+                        <h3 class="text-4xl md:text-5xl font-black text-primary">+20</h3>
                         <p class="text-gray-400 font-medium">Colaboraciones institucionales</p>
                     </div>
 
@@ -257,9 +255,9 @@
                                 <span class="material-symbols-outlined text-2xl">memory</span>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="text-white text-xl font-bold">Tecnología In-House:</h3>
+                                <h3 class="text-white text-xl font-bold">Innovación InHouse</h3>
                                 <p class="text-[#9db8a8] text-sm leading-relaxed">
-                                    Todas las máquinas (Láser, CNC, 3D) están aquí, listas para usar.
+                                    Máquinas y procesos en un solo lugar, listo para usar.
                                 </p>
                             </div>
                         </div>
@@ -285,10 +283,36 @@
                                 <span class="material-symbols-outlined text-2xl">groups</span>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="text-white text-xl font-bold">Enfoque Comercial y Educativo: </h3>
+                                <h3 class="text-white text-xl font-bold">Agilidad Radical</h3>
                                 <p class="text-[#9db8a8] text-sm leading-relaxed">
-                                    Te ayudamos tanto si necesitas una maquila urgente como si quieres aprender a
-                                    hacerlo tú mismo.
+                                    De la idea al producto, sin mínimos de producción.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="group flex flex-col gap-4 rounded-xl border border-[#3c5345] bg-[#1c2620] p-6 transition-all hover:border-primary/50 hover:bg-[#001D8B]">
+                            <div
+                                class="w-12 h-12 rounded-full bg-background-dark flex items-center justify-center border border-[#3c5345] group-hover:border-primary/50 group-hover:bg-[#01A7A4] text-white transition-colors">
+                                <span class="material-symbols-outlined text-2xl">groups</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-white text-xl font-bold">Hiper-Personalización </h3>
+                                <p class="text-[#9db8a8] text-sm leading-relaxed">
+                                    Fabricación de piezas únicas que la industria masiva no puede atender.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="group flex flex-col gap-4 rounded-xl border border-[#3c5345] bg-[#1c2620] p-6 transition-all hover:border-primary/50 hover:bg-[#001D8B]">
+                            <div
+                                class="w-12 h-12 rounded-full bg-background-dark flex items-center justify-center border border-[#3c5345] group-hover:border-primary/50 group-hover:bg-[#01A7A4] text-white transition-colors">
+                                <span class="material-symbols-outlined text-2xl">groups</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-white text-xl font-bold">Socios de la Innovación</h3>
+                                <p class="text-[#9db8a8] text-sm leading-relaxed">
+                                    know-how técnico y acompañamiento en diseño y metodologías
+
                                 </p>
                             </div>
                         </div>
@@ -299,9 +323,63 @@
     </div>
 </div>
 
+<!-- Servicios generales -->
+<div class="py-20 border-t border-surface-border" id="serviciosGenerales">
+    <div class="max-w-[800px] mx-auto px-6">
+        <h1 class="text-5xl font-black leading-[1.1] tracking-[-0.033em] text-white md:text-6xl xl:text-6xl mb-10 ">
+            <span class="text-gray-custom">
+                Servicios
+            </span>
 
+            <span class="bg-gradient-to-r from-[#038FC7] via-[#08A5D3] to-[#03C7E5] bg-clip-text text-transparent">
+                Generales
+            </span>
 
-<!-- Solicita tu presupuesto -->
+        </h1>
+        <div class="flex flex-col gap-4">
+            <details
+                class="group bg-surface-dark rounded-xl p-4 border border-surface-border [&amp;_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-white font-medium">
+                    <span>Nombre del servicio 1</span>
+                    <span class="transition group-open:rotate-180">
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </span>
+                </summary>
+                <p class="text-gray-400 mt-4 text-sm leading-relaxed group-open:animate-fadeIn">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam voluptatem eius porro aliquid
+                    omnis soluta debitis fuga animi deleniti.
+                </p>
+            </details>
+            <details
+                class="group bg-surface-dark rounded-xl p-4 border border-surface-border [&amp;_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-white font-medium">
+                    <span>Nombre del servicio 2</span>
+                    <span class="transition group-open:rotate-180">
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </span>
+                </summary>
+                <p class="text-gray-400 mt-4 text-sm leading-relaxed group-open:animate-fadeIn">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, cumque enim. Cumque odit possimus
+                    similique.
+                </p>
+            </details>
+            <details
+                class="group bg-surface-dark rounded-xl p-4 border border-surface-border [&amp;_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-white font-medium">
+                    <span>Nombre del servicio 3</span>
+                    <span class="transition group-open:rotate-180">
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </span>
+                </summary>
+                <p class="text-gray-400 mt-4 text-sm leading-relaxed group-open:animate-fadeIn">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, voluptatum. Eius, praesentium!
+                </p>
+            </details>
+        </div>
+    </div>
+</div>
+
+<!-- Solicita  Contacta con nosotros -->
 <section class="w-full  max-w-[960px] mx-auto text-center">
     <div class="rounded-[2.5rem] md:p-8 flex flex-col items-center relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-1  from-transparent via-primary to-transparent opacity-50">
@@ -310,20 +388,20 @@
 
             <h2 class="text-4xl font-black leading-[1.1] tracking-[-0.033em] text-white md:text-4xl xl:text-5xl">
                 <span class="text-gray-custom">
-                    Solicita
+                    Contacta
                 </span>
                 <span class="bg-gradient-to-r from-[#038FC7] via-[#08A5D3] to-[#03C7E5] bg-clip-text text-transparent">
-                    tu presupuesto
+                    con nosotros
 
                 </span>
             </h2>
         </div>
-        <p class="text-[#a0b0a8] text-lg max-w-lg z-10">Describe tu idea, sube tus archivos y nuestro equipo técnico
-            analizará la viabilidad para darte la mejor solución.</p>
+        <p class="text-[#a0b0a8] text-lg max-w-lg z-10">Cuéntanos tu idea o proyectos o sube tus archivos y nos
+            comunicamos contigo</p>
         <div class="flex flex-col sm:flex-row gap-4 mt-4 z-10 w-full justify-center">
             <a routerLink="/servicios"
                 class="verdeFuerteFab flex h-14 min-w-[160px] items-center justify-center rounded-full  px-8 text-base font-bold text-[#111814]  shadow-[0_4px_20px_rgba(255, 193, 0, 1)] transition-transform hover:scale-105">
-                <span class="text-white">Contactanos</span>
+                <span class="text-white">Contáctanos </span>
             </a>
         </div>
         <p>.</p>
@@ -333,6 +411,8 @@
         </div>
     </div>
 </section>
+
+
 
 
 <!-- <div style="background-color: #eff5fb;"

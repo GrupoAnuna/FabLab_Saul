@@ -6,7 +6,7 @@
          backdrop-blur-md">
             <div class="mx-auto flex w-full max-w-[1366px] items-center justify-between px-4 py-3 md:px-10">
                 <!-- Brand -->
-                <a routerLink="/">
+                <a routerLink="/" (click)="scrollToSection('inicio')">
                     <img src="/images/fabblancoo.png" alt="FabLab" class="h-8 w-auto md:h-10 lg:h-12 object-contain">
                 </a>
                 <!-- Desktop Nav -->
@@ -16,37 +16,9 @@
                         <!-- Dropdown Servicios-->
                         <div class="relative">
                             <div class="relative">
-                                <button class="text-white" (click)="toggleDropdown('servicios')">
-                                    Servicios
+                                <button class="text-white" (click)="toggleDropdown('servicios')" (click)="scrollToSection('servicio-1')">
+                                   Servicios de Fabricación
                                 </button>
-
-                                <div *ngIf="dropdowns['servicios']"
-                                    class="absolute  mt-2 text-white  shadow-lg fondoVerdeOscuro w-96">
-                                    <a routerLink="/servicios" class="block px-4 py-2 hover:bg-[#0056AA] cursor-pointer"
-                                        (click)="scrollToSection('servicio-1')">
-                                        Impresión 3D a medida
-                                    </a>
-                                    <a routerLink="/servicios"
-                                        class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
-                                        (click)="scrollToSection('servicio-2')">
-                                        Corte y grabado láser
-                                    </a>
-                                    <a routerLink="/servicios"
-                                        class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
-                                        (click)="scrollToSection('servicio-3')">
-                                        Fresado CNC y carpintería digital
-                                    </a>
-                                    <a routerLink="/servicios"
-                                        class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
-                                        (click)="scrollToSection('servicio-4')">
-                                        Electrónica y montaje básico
-                                    </a>
-                                    <a routerLink="/servicios"
-                                        class="block px-4 py-2 hover:bg-[#0056AA]  cursor-pointer"
-                                        (click)="scrollToSection('servicio-5')">
-                                        Prototipos y maquetas para empresas
-                                    </a>
-                                </div>
                             </div>
                         </div>
 
