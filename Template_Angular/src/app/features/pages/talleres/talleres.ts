@@ -5,7 +5,6 @@ import { Scroll } from '../../../services/scroll';
 
 @Component({
   selector: 'app-talleres',
-  imports: [RouterLink],
   templateUrl: './talleres.html',
   styleUrl: './talleres.css',
 })
